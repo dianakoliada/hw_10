@@ -14,16 +14,10 @@ $mainSize: 1rem;
 .wrapper {
     font-family: 'Hind Siliguri', sans-serif;
 
-    
-    
-    
-  
-
     .header {
         outline: 4px solid black;
         @include setPosition (flex, row, center, center);
         padding: $size;
-        
         
         .header_block {
                 @include setPosition (flex, row, space-between, center);
@@ -54,6 +48,30 @@ $mainSize: 1rem;
                         line-height: $sizeFigure - 15;
                         padding-left: $size + 2.5;
                     }
+                }
+
+                .block--flex {
+                    
+                    outline: 2px solid blue;
+                    width: $size + 29;
+
+                    .header_nav {}
+
+                        .nav_list {
+                            @include setPosition (flex, row, space-between, center);
+                
+                        }
+
+                            .nav_item {
+                                
+                            }
+
+                                .nav_link {
+                                    text-decoration: none;
+                                    font-size: $mainSize + 0.46;
+                                    color: $titleColor;
+                                    line-height: $sizeFigure -12;
+                                }
                 }
             }
     }

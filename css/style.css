@@ -35,5 +35,18 @@
           font-size: 3rem;
           line-height: 5px;
           padding-left: 3.5%; }
+      .wrapper .header .header_block .block--flex {
+        outline: 2px solid blue;
+        width: 30%; }
+        .wrapper .header .header_block .block--flex .nav_list {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center; }
+        .wrapper .header .header_block .block--flex .nav_link {
+          text-decoration: none;
+          font-size: 1.46rem;
+          color: #6c6c6c;
+          line-height: 20px -12; }
 
 /*# sourceMappingURL=style.css.map */
