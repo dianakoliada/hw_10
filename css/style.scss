@@ -7,4 +7,61 @@ $textColor: #909090;
 $titleColor: #6c6c6c;
 $nameColor: #6f7173;
 $blockColor: #ffffff;
-$size: 10; /*добавить ед.измерения*/
+$size: 1%;
+$sizeFigure: 20px;
+$mainSize: 1rem;
+
+.wrapper {
+    font-family: 'Hind Siliguri', sans-serif;
+
+    
+    
+    
+  
+
+    .header {
+        outline: 4px solid black;
+        @include setPosition (flex, row, center, center);
+        padding: $size;
+        
+        
+        .header_block {
+                @include setPosition (flex, row, space-between, center);
+                outline: 2px solid red;
+                width: $size + 79;
+                
+                .header_block--flex {
+                    @include setPosition (flex, row, flex-start, center);
+                    outline: 2px solid blue;
+                    width: $size + 29;
+                    
+                    .logo {
+                        width: $sizeFigure + 24;
+                        height: $sizeFigure + 24;
+                        background-color: #5094f2;
+                        border-radius: $size + 49;
+                        position: relative;
+
+                        .header_pic {
+                            position: absolute;
+                            top: 25%;
+                            left: 25%;
+                        }
+                    }
+
+                    .logo_title {
+                        font-size: $mainSize + 2;
+                        line-height: $sizeFigure - 15;
+                        padding-left: $size + 2.5;
+                    }
+                }
+            }
+    }
+    
+    
+
+            
+
+
+            
+}
