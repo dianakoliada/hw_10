@@ -48,5 +48,153 @@
           font-size: 1.46rem;
           color: #6c6c6c;
           line-height: 20px -12; }
+  .wrapper .main .container {
+    outline: 2px solid yellow; }
+  .wrapper .main .container--primary {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: url(../imgs/background.png);
+    background-size: cover; }
+    .wrapper .main .container--primary .block_flex--primary {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      width: 80%;
+      padding-top: 2%;
+      padding-left: 0.5%;
+      padding-bottom: 1%;
+      outline: 2px solid red; }
+      .wrapper .main .container--primary .block_flex--primary .block_secondary {
+        outline: 2px solid greenyellow;
+        width: 66%; }
+        .wrapper .main .container--primary .block_flex--primary .block_secondary .main_title {
+          color: #ffffff;
+          font-size: 3.2rem;
+          line-height: 44px; }
+        .wrapper .main .container--primary .block_flex--primary .block_secondary .title {
+          color: #ffffff;
+          font-size: 1.89rem;
+          line-height: 44px; }
+        .wrapper .main .container--primary .block_flex--primary .block_secondary .btn {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          width: 180px;
+          background-color: #5094f2;
+          margin-left: 1%;
+          margin-top: 2%; }
+          .wrapper .main .container--primary .block_flex--primary .block_secondary .btn .btn_title {
+            font-size: 1.6rem;
+            margin-left: 1%;
+            color: #ffffff;
+            line-height: 44px; }
+  .wrapper .main .container--special {
+    display: flex;
+    flex-direction: row;
+    justify-content: baseline;
+    align-items: flex-start;
+    margin-top: 3%; }
+    .wrapper .main .container--special .block_item {
+      width: 80%; }
+    .wrapper .main .container--special .block_item--primary,
+    .wrapper .main .container--special .block_item--secondary,
+    .wrapper .main .container--special .block_item--third {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+      .wrapper .main .container--special .block_item--primary .circle_one,
+      .wrapper .main .container--special .block_item--secondary .circle_one,
+      .wrapper .main .container--special .block_item--third .circle_one {
+        background-color: #5094f2;
+        width: 186px;
+        height: 186px;
+        border-radius: 50%;
+        position: relative; }
+        .wrapper .main .container--special .block_item--primary .circle_one .primary_pic,
+        .wrapper .main .container--special .block_item--secondary .circle_one .primary_pic,
+        .wrapper .main .container--special .block_item--third .circle_one .primary_pic {
+          position: absolute;
+          top: 20%;
+          left: 31%; }
+      .wrapper .main .container--special .block_item--primary .special_name,
+      .wrapper .main .container--special .block_item--secondary .special_name,
+      .wrapper .main .container--special .block_item--third .special_name {
+        font-size: 1.45rem;
+        line-height: 44px;
+        color: #5094f2;
+        margin-top: 2%; }
+      .wrapper .main .container--special .block_item--primary .special_title,
+      .wrapper .main .container--special .block_item--secondary .special_title,
+      .wrapper .main .container--special .block_item--third .special_title {
+        font-size: 1.1rem;
+        line-height: 20px;
+        color: #909090;
+        text-align: center;
+        width: 50%; }
+      .wrapper .main .container--special .block_item--primary .circle_two,
+      .wrapper .main .container--special .block_item--secondary .circle_two,
+      .wrapper .main .container--special .block_item--third .circle_two {
+        background-color: #d94748;
+        width: 186px;
+        height: 186px;
+        border-radius: 50%;
+        position: relative; }
+        .wrapper .main .container--special .block_item--primary .circle_two .primary_pic--secondary,
+        .wrapper .main .container--special .block_item--secondary .circle_two .primary_pic--secondary,
+        .wrapper .main .container--special .block_item--third .circle_two .primary_pic--secondary {
+          position: absolute;
+          top: 27%;
+          left: 25%; }
+      .wrapper .main .container--special .block_item--primary .circle_three,
+      .wrapper .main .container--special .block_item--secondary .circle_three,
+      .wrapper .main .container--special .block_item--third .circle_three {
+        background-color: #ebbb11;
+        width: 186px;
+        height: 186px;
+        border-radius: 50%;
+        position: relative; }
+        .wrapper .main .container--special .block_item--primary .circle_three .primary_pic--third,
+        .wrapper .main .container--special .block_item--secondary .circle_three .primary_pic--third,
+        .wrapper .main .container--special .block_item--third .circle_three .primary_pic--third {
+          position: absolute;
+          top: 25%;
+          left: 25%; }
+  .wrapper .main .container--additional {
+    margin-top: 3%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; }
+    .wrapper .main .container--additional .block_item--additional {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      width: 80%;
+      outline: 2px solid blue; }
+      .wrapper .main .container--additional .block_item--additional .additional_title {
+        outline: 2px solid red;
+        font-size: 3.03rem;
+        line-height: 44px;
+        color: #6f7173;
+        text-align: center; }
+      .wrapper .main .container--additional .block_item--additional .additional_side {
+        outline: 2px solid red;
+        width: 40%;
+        font-size: 1.89rem;
+        line-height: 44px;
+        color: #6f7173;
+        text-align: center; }
+        .wrapper .main .container--additional .block_item--additional .additional_side .additional_text {
+          padding-top: 2%;
+          font-size: 1.1rem;
+          line-height: 36px;
+          color: #909090;
+          text-align: left; }
 
 /*# sourceMappingURL=style.css.map */

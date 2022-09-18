@@ -32,14 +32,14 @@ $mainSize: 1rem;
                     .logo {
                         width: $sizeFigure + 24;
                         height: $sizeFigure + 24;
-                        background-color: #5094f2;
+                        background-color: $mainColor;
                         border-radius: $size + 49;
                         position: relative;
 
                         .header_pic {
                             position: absolute;
-                            top: 25%;
-                            left: 25%;
+                            top: $size +24;
+                            left: $size +24;
                         }
                     }
 
@@ -51,7 +51,6 @@ $mainSize: 1rem;
                 }
 
                 .block--flex {
-                    
                     outline: 2px solid blue;
                     width: $size + 29;
 
@@ -59,12 +58,9 @@ $mainSize: 1rem;
 
                         .nav_list {
                             @include setPosition (flex, row, space-between, center);
-                
                         }
 
-                            .nav_item {
-                                
-                            }
+                            .nav_item {}
 
                                 .nav_link {
                                     text-decoration: none;
@@ -74,6 +70,169 @@ $mainSize: 1rem;
                                 }
                 }
             }
+    }
+
+    .main {
+        .container {
+            outline: 2px solid yellow;
+        }
+        
+        .container--primary {
+            @include setPosition (flex, row, center, center);
+            background: url(../imgs/background.png);
+            background-size: cover;
+            
+            .block_flex--primary {
+                @include setPosition (flex, row, space-between, center);
+                width: $size + 79;
+                padding-top: $size +1;
+                padding-left: $size /2;
+                padding-bottom: $size;
+                outline: 2px solid red;
+                
+                .block_secondary {
+                    outline: 2px solid greenyellow;
+                    width: $size +65;
+
+                    .main_title {
+                        color: $blockColor;
+                        font-size: $mainSize + 2.2;
+                        line-height: $sizeFigure +24;
+                    }
+
+                    .title {
+                        color: $blockColor;
+                        font-size: $mainSize + 0.89;
+                        line-height: $sizeFigure +24
+                    }
+
+                    .btn {
+                        @include setPosition (flex, row, center, center);
+                        width: $sizeFigure +160;
+                        background-color: $mainColor;
+                        margin-left: $size;
+                        margin-top: $size +1;
+
+                        .btn_title {
+                            font-size: $mainSize +0.6;
+                            margin-left: $size;
+                            color: $blockColor;
+                            line-height: $sizeFigure +24;
+                        }
+                    }
+                }
+            }
+        }
+
+        .container--special {
+            @include setPosition (flex, row, baseline, flex-start);
+            margin-top: $size +2;
+            
+            .block_item {
+                width: $size +79;
+            }
+
+            .block_item--primary,
+            .block_item--secondary,
+            .block_item--third {
+                @include setPosition (flex, column, center, center);
+
+                .circle_one {
+                    background-color: $mainColor;
+                    width: $sizeFigure +166;
+                    height: $sizeFigure +166;
+                    border-radius: $size +49;
+                    position: relative;
+
+                    .primary_pic {
+                        position: absolute;
+                        top: $size +19;
+                        left: $size +30;
+                    }
+                }
+
+                .special_name {
+                    font-size: $mainSize +0.45;
+                    line-height: $sizeFigure +24;
+                    color: $mainColor;
+                    margin-top: $size +1;
+                }
+
+                .special_title {
+                    font-size: $mainSize +0.1;
+                    line-height: $sizeFigure;
+                    color: $textColor;
+                    text-align: center;
+                    width: $size *50;
+                }
+
+                .circle_two {
+                    background-color: $primaryColor;
+                    width: $sizeFigure +166;
+                    height: $sizeFigure +166;
+                    border-radius: $size +49;
+                    position: relative;
+
+                    .primary_pic--secondary {
+                        position: absolute;
+                        top: $size +26;
+                        left: $size +24;
+                    }
+                }
+
+                .circle_three {
+                    background-color: $secondaryColor;
+                    width: $sizeFigure +166;
+                    height: $sizeFigure +166;
+                    border-radius: $size +49;
+                    position: relative;
+
+                    .primary_pic--third {
+                        position: absolute;
+                        top: $size +24;
+                        left: $size +24;
+                    }
+                }
+            }
+        }
+
+        .container--additional {
+            margin-top: $size +2;
+            @include setPosition (flex, row, center, center);
+            
+            .block_item--additional {
+                @include setPosition (flex, row, space-around, center);
+                width: $size +79;
+                outline: 2px solid blue;
+
+                .additional_title {
+                    outline: 2px solid red;
+                    font-size: $mainSize +2.03;
+                    line-height: $sizeFigure +24;
+                    color: $nameColor;
+                    text-align: center;
+                }
+
+                .additional_side {
+                    outline: 2px solid red;
+                    width: 40%;
+                    font-size: $mainSize +0.89;
+                    line-height: $sizeFigure +24;
+                    color: $nameColor;
+                    text-align: center;
+
+                    .additional_text {
+                        padding-top: $size +1;
+                        font-size: $mainSize +0.1;
+                        line-height: $sizeFigure +16;
+                        color: $textColor;
+                        text-align: left;
+                    }
+                }
+
+            }
+
+        }
     }
     
     
