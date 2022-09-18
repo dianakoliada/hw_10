@@ -15,18 +15,15 @@ $mainSize: 1rem;
     font-family: 'Hind Siliguri', sans-serif;
 
     .header {
-        outline: 4px solid black;
         @include setPosition (flex, row, center, center);
         padding: $size;
         
         .header_block {
                 @include setPosition (flex, row, space-between, center);
-                outline: 2px solid red;
                 width: $size + 79;
                 
                 .header_block--flex {
                     @include setPosition (flex, row, flex-start, center);
-                    outline: 2px solid blue;
                     width: $size + 29;
                     
                     .logo {
@@ -51,7 +48,6 @@ $mainSize: 1rem;
                 }
 
                 .block--flex {
-                    outline: 2px solid blue;
                     width: $size + 29;
 
                     .header_nav {}
@@ -74,7 +70,7 @@ $mainSize: 1rem;
 
     .main {
         .container {
-            outline: 2px solid yellow;
+
         }
         
         .container--primary {
@@ -88,10 +84,8 @@ $mainSize: 1rem;
                 padding-top: $size +1;
                 padding-left: $size /2;
                 padding-bottom: $size;
-                outline: 2px solid red;
                 
                 .block_secondary {
-                    outline: 2px solid greenyellow;
                     width: $size +65;
 
                     .main_title {
@@ -201,12 +195,10 @@ $mainSize: 1rem;
             @include setPosition (flex, row, center, center);
             
             .block_item--additional {
-                @include setPosition (flex, row, space-around, center);
+                @include setPosition (flex, row, space-between, center);
                 width: $size +79;
-                outline: 2px solid blue;
 
                 .additional_title {
-                    outline: 2px solid red;
                     font-size: $mainSize +2.03;
                     line-height: $sizeFigure +24;
                     color: $nameColor;
@@ -214,14 +206,14 @@ $mainSize: 1rem;
                 }
 
                 .additional_side {
-                    outline: 2px solid red;
                     width: 40%;
                     font-size: $mainSize +0.89;
                     line-height: $sizeFigure +24;
                     color: $nameColor;
-                    text-align: center;
+                    text-align: left;
 
-                    .additional_text {
+                    .additional_text,
+                    .footer_title {
                         padding-top: $size +1;
                         font-size: $mainSize +0.1;
                         line-height: $sizeFigure +16;
@@ -229,16 +221,18 @@ $mainSize: 1rem;
                         text-align: left;
                     }
                 }
-
             }
-
         }
     }
-    
-    
 
-            
-
-
-            
+    .footer {
+        border-top: 1px solid $textColor;
+        margin-top: $size +1;
+        
+        .footer_item {
+            text-align: center;
+            padding: $size +1.5;
+            color: $textColor;
+        }
+    }           
 }
