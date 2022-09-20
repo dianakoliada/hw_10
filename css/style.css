@@ -39,14 +39,14 @@
           flex-direction: row;
           justify-content: space-between;
           align-items: center; }
-        .wrapper .header .header_block .block--flex .nav_link {
+        .wrapper .header .header_block .block--flex .nav__link {
           font-size: 1.46rem;
           line-height: 20px -12;
           color: #6c6c6c;
           text-align: start;
           text-decoration: none;
           transition: all 2s; }
-          .wrapper .header .header_block .block--flex .nav_link:hover {
+          .wrapper .header .header_block .block--flex .nav__link:hover {
             text-decoration: underline;
             cursor: pointer;
             color: #5094f2;

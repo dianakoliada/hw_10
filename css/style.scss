@@ -54,7 +54,7 @@ $mainSize: 1rem;
                         @include setPosition (flex, row, space-between, center);
                     }
 
-                        .nav_link {
+                        .nav__link {
                             @include decorateTitle ($mainSize + 0.46, $sizeFigure -12, $titleColor, start);
                             text-decoration: none;
                             transition: all 2s;
