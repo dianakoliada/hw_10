@@ -18,57 +18,77 @@ $mainSize: 1rem;
         @include setPosition (flex, row, center, center);
         padding: $size;
         
-        .header_block {
-                @include setPosition (flex, row, space-between, center);
-                width: $size + 79;
+        .header__block {
+            @include setPosition (flex, row, space-between, center);
+            width: $size + 79;
                 
-                .header_block--flex {
+                .header__block--flex {
                     @include setPosition (flex, row, flex-start, center);
                     width: $size + 29;
                     
-                    .header_logo {
+                    .header__logo {
                         width: $sizeFigure + 24;
                         height: $sizeFigure + 24;
                         background-color: $mainColor;
                         border-radius: $size + 49;
                         position: relative;
+                        transition: all 2s;
 
-                        .header_pic {
+                            &:hover {
+                                cursor: pointer;
+                                transform: scale(0.8);
+                                transition: all 2s;
+                            }
+
+                        .header__pic {
                             position: absolute;
                             top: $size +24;
                             left: $size +24;
                         }
                     }
 
-                    .header_title {
+                    .header__title {
                         font-size: $mainSize + 2;
                         line-height: $sizeFigure - 15;
                         padding-left: $size + 2.5;
                     }
                 }
 
-                .block--flex {
+                .header__block--inner {
                     width: $size + 29;
-
-                    .nav_list {
+                    
+                    .nav__list {
                         @include setPosition (flex, row, space-between, center);
-                    }
+
+                        .nav__link--active {
+                            @include decorateTitle ($mainSize + 0.46, $sizeFigure -12, $titleColor, start);
+                            text-decoration: none;
+                        }
+
+                        .nav__link--active::after {
+                            display: block;
+                            content: "";
+                            background-color: $mainColor;
+                            width: $size+1.9;
+                            height: $sizeFigure/10;
+                            position: absolute;
+                            bottom: $size+90.5;   
+                        }
 
                         .nav__link {
                             @include decorateTitle ($mainSize + 0.46, $sizeFigure -12, $titleColor, start);
                             text-decoration: none;
-                            transition: all 2s;
-
+                        
                             &:hover {
-                                text-decoration: underline;
                                 cursor: pointer;
                                 color: $mainColor;
-                                transition: all 2s;
                             }
                         }
+                    }
                 }
-            }
+        }
     }
+    
 
     .main {
 
@@ -77,7 +97,7 @@ $mainSize: 1rem;
             background: url(../imgs/background.png);
             background-size: cover;
             
-            .block_flex--primary {
+            .main__block {
                 @include setPosition (flex, row, space-between, center);
                 width: $size + 79;
                 padding-top: $size +1;
@@ -93,18 +113,20 @@ $mainSize: 1rem;
                         }
                     }
                 
-                .block_secondary {
+                .main__block--secondary {
                     width: $size +65;
+                    display: flex;
+                    flex-direction: column;
 
-                    .main_title {
+                    .main__title {
                         @include decorateTitle ($mainSize + 2.2, $sizeFigure +24, $blockColor, start);
                     }
 
-                    .title {
+                    .main__title--secondary {
                         @include decorateTitle ($mainSize + 0.89, $sizeFigure +24, $blockColor, start);
                     }
 
-                    .btn {
+                    .main__btn {
                         @include setPosition (flex, row, center, center);
                         width: $sizeFigure +160;
                         background-color: $mainColor;
@@ -119,7 +141,7 @@ $mainSize: 1rem;
                             transition: all 2s;
                         }
 
-                        .btn_title {
+                        .btn__title {
                             @include decorateTitle ($mainSize + 0.6, $sizeFigure +24, $blockColor, start);
                             margin-left: $size;
                         }
@@ -132,16 +154,16 @@ $mainSize: 1rem;
             @include setPosition (flex, row, baseline, flex-start);
             margin-top: $size +2;
             
-            .block_item {
+            .block__item {
                 width: $size +79;
             }
 
-            .block_item--primary,
-            .block_item--secondary,
-            .block_item--special {
+            .block__item--primary,
+            .block__item--secondary,
+            .block__item--special {
                 @include setPosition (flex, column, center, center);
 
-                .circle_primary {
+                .circle__primary {
                     @include createPic ($mainColor, $sizeFigure +166, $sizeFigure +166, $size +49, relative);
                     transition: all 2s;
 
@@ -152,12 +174,12 @@ $mainSize: 1rem;
                         transition: all 2s;
                     }
 
-                    .primary_pic {
+                    .primary__pic {
                         @include positionIcon (absolute, $size +19, $size +30); 
                     }
                 }
 
-                .special_name {
+                .special__text {
                     @include decorateTitle ($mainSize + 0.45, $sizeFigure +24, $mainColor, start);
                     margin-top: $size +1;
                     transition: all 3s;
@@ -170,12 +192,12 @@ $mainSize: 1rem;
                     }
                 }
 
-                .special_title {
+                .special__title {
                     @include decorateTitle ($mainSize + 0.1, $sizeFigure, $textColor, center);
                     width: $size *50;
                 }
 
-                .circle_secondary {
+                .circle__secondary {
                     @include createPic ($primaryColor, $sizeFigure +166, $sizeFigure +166, $size +49, relative);
                     transition: all 2s;
 
@@ -186,12 +208,12 @@ $mainSize: 1rem;
                         transition: all 2s;
                     }
 
-                    .primary_pic--secondary {
+                    .primary__pic--secondary {
                         @include positionIcon (absolute, $size +26, $size +24);
                     }
                 }
 
-                .circle_special {
+                .circle__special {
                     @include createPic ($secondaryColor, $sizeFigure +166, $sizeFigure +166, $size +49, relative);
                     transition: all 2s;
 
@@ -202,7 +224,7 @@ $mainSize: 1rem;
                         transition: all 2s;
                     }
 
-                    .primary_pic--third {
+                    .primary__pic--third {
                         @include positionIcon (absolute, $size +24, $size +24);
                     }
                 }
@@ -213,11 +235,11 @@ $mainSize: 1rem;
             @include setPosition (flex, row, center, center);
             margin-top: $size +2;
             
-            .block_item--additional {
+            .block__item--additional {
                 @include setPosition (flex, row, space-between, center);
                 width: $size +79;
 
-                .additional_title {
+                .additional__title {
                     @include decorateTitle ($mainSize +2.03, $sizeFigure +24, $nameColor, center);
                     transition: all 4s;
                     
@@ -233,12 +255,12 @@ $mainSize: 1rem;
                     }
                 }
 
-                .additional_side {
+                .additional__side {
                     @include decorateTitle ($mainSize +0.89, $sizeFigure +24, $nameColor, left);
                     width: 40%;
 
-                    .additional_text,
-                    .footer_title {
+                    .additional__text,
+                    .footer__title {
                         @include decorateTitle ($mainSize +0.1, $sizeFigure +16, $textColor, left);
                         padding-top: $size +1;
                     }
@@ -251,7 +273,7 @@ $mainSize: 1rem;
         border-top: 1px solid $textColor;
         margin-top: $size +1;
         
-        .footer_item {
+        .footer__item {
             text-align: center;
             padding: $size +1.5;
             color: $textColor;

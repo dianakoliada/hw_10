@@ -14,24 +14,26 @@
 <body>
     <div class="wrapper">
         <header class="header">
-            <div class="header_block">
-                <div class="header_block--flex">
-                    <div class="header_logo">
-                        <div class="header_pic">
-                            <img src="imgs/comas.png" alt="logo_comas">
+            <div class="header__block">
+                <div class="header__block--flex">
+                    <div class="header__logo">
+                        <div class="header__pic">
+                            <a href="#">
+                                <img src="imgs/comas.png" alt="logo_comas">
+                            </a>
                         </div>
                     </div>
-                    <div class="header_title">
+                    <div class="header__title">
                         <h1>
                             Prechu
                         </h1>
                     </div>
                 </div>
-                <div class="block--flex">
-                    <nav class="header_nav">
-                        <ul class="nav_list">
+                <div class="header__block--inner">
+                    <nav class="header__nav">
+                        <ul class="nav__list">
                             <li class="nav__item">
-                                <a href="#" class="nav__link">
+                                <a href="#" class="nav__link--active">
                                     Home
                                 </a>
                             </li>
@@ -58,23 +60,23 @@
         <!-- End of Header -->
         <main class="main">
             <div class="container container--primary">
-                <div class="block_flex--primary">
-                    <div class="block_primary">
+                <div class="main__block">   <!-- block__flex--primary -->   
+                    <div class="main__block--primary">   <!-- block__primary-->
                         <img src="imgs/iphone.png" alt="iphone" id="picture__item">
                     </div>
-                    <div class="block_secondary">
-                        <p class="main_title">
+                    <div class="main__block--secondary">  <!--block__secondary-->
+                        <p class="main__title">
                             Lorem Ipsum is simply 
                         </p>
-                        <p class="title">
+                        <p class="main__title--secondary"> <!--title-->
                             dummy text of the
                         </p>
-                        <p class="title">
+                        <p class="main__title--secondary"> <!--title-->
                             printing & typesetting
                         </p>
-                        <div class="btn">
+                        <div class="main__btn"> <!--btn-->
                             <img src="imgs/check.png" alt="check">
-                            <p class="btn_title">
+                            <p class="btn__title">
                                 Sign up now
                             </p>
                         </div>
@@ -82,53 +84,53 @@
                 </div>
             </div>
             <div class="container container--special">
-                <div class="block_item block_item--primary">
-                    <div class="circle_primary">
-                        <img src="imgs/shape_y.png" alt="pencil" class="primary_pic">
+                <div class="block__item block__item--primary">
+                    <div class="circle__primary">
+                        <img src="imgs/shape_y.png" alt="pencil" class="primary__pic">
                     </div>
-                    <p class="special_name">
+                    <p class="special__text">
                         Contrary to popular
                     </p>
-                    <p class="special_title">
+                    <p class="special__title">
                         Lorem Ipsum is not simply random text. It has roots in a piece
                     </p>
                 </div>
-                <div class="block_item block_item--secondary">
-                    <div class="circle_secondary">
-                        <img src="imgs/shape_l.png" alt="screen" class="primary_pic--secondary">
+                <div class="block__item block__item--secondary">
+                    <div class="circle__secondary">
+                        <img src="imgs/shape_l.png" alt="screen" class="primary__pic--secondary">
                     </div>
-                    <p class="special_name">
+                    <p class="special__text">
                         Contrary to popular
                     </p>
-                    <p class="special_title">
+                    <p class="special__title">
                         Lorem Ipsum is not simply random text. It has roots in a piece
                     </p>
                 </div>
-                <div class="block_item block_item--special">
-                    <div class="circle_special">
-                        <img src="imgs/shape_o.png" alt="backet" class="primary_pic--third">
+                <div class="block__item block__item--special">
+                    <div class="circle__special">
+                        <img src="imgs/shape_o.png" alt="backet" class="primary__pic--third">
                     </div>
-                    <p class="special_name">
+                    <p class="special__text">
                         Contrary to popular
                     </p>
-                    <p class="special_title">
+                    <p class="special__title">
                         Lorem Ipsum is not simply random text. It has roots in a piece
                     </p>
                 </div>
             </div>
             <div class="container container--additional">
-                <div class="block_item block_item--additional">
-                    <div class="additional_title">
+                <div class="block__item block__item--additional">
+                    <div class="additional__title">
                         <h2 id="text">
                             The Shopping cart
                         </h2>
                         <img src="imgs/backet.png" alt="backet_big">
                     </div>
-                    <div class="additional_side">
+                    <div class="additional__side">
                         <h3>
                             Some Bullet text here
                         </h3>
-                        <p class="additional_text">
+                        <p class="additional__text">
                             Lorem Ipsum is simply dummy text of the printing and typesetting 
                             <br>
                             Lorem Ipsum has been the industry's standard dummy text ever 
@@ -148,8 +150,8 @@
             </div>
         </main>
         <footer class="footer">
-            <div class="footer_item">
-                <span class="footer_title">
+            <div class="footer__item">
+                <span class="footer__title">
                     Copyright &copy; 2012-2013 cssauthor.com
                 </span>
             </div>
