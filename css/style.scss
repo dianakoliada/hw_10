@@ -62,26 +62,20 @@ $mainSize: 1rem;
 
                         .nav__link--active {
                             @include decorateTitle ($mainSize + 0.46, $sizeFigure -12, $titleColor, start);
-                            text-decoration: none;
+                            text-decoration: none;  
                         }
-
-                        .nav__link--active::after {
-                            display: block;
-                            content: "";
-                            background-color: $mainColor;
-                            width: $size+1.9;
-                            height: $sizeFigure/10;
-                            position: absolute;
-                            bottom: $size+90.5;   
-                        }
-
+                        
                         .nav__link {
                             @include decorateTitle ($mainSize + 0.46, $sizeFigure -12, $titleColor, start);
                             text-decoration: none;
-                        
+                            transition: all 1.5s;
+                            
                             &:hover {
                                 cursor: pointer;
+                                text-decoration: underline;
+                                text-underline-offset: $sizeFigure +13;
                                 color: $mainColor;
+                                transition: all 1.5s;
                             }
                         }
                     }

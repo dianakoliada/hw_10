@@ -50,23 +50,19 @@
             color: #6c6c6c;
             text-align: start;
             text-decoration: none; }
-          .wrapper .header .header__block .header__block--inner .nav__list .nav__link--active::after {
-            display: block;
-            content: "";
-            background-color: #5094f2;
-            width: 2.9%;
-            height: 2px;
-            position: absolute;
-            bottom: 91.5%; }
           .wrapper .header .header__block .header__block--inner .nav__list .nav__link {
             font-size: 1.46rem;
             line-height: 20px -12;
             color: #6c6c6c;
             text-align: start;
-            text-decoration: none; }
+            text-decoration: none;
+            transition: all 1.5s; }
             .wrapper .header .header__block .header__block--inner .nav__list .nav__link:hover {
               cursor: pointer;
-              color: #5094f2; }
+              text-decoration: underline;
+              text-underline-offset: 33px;
+              color: #5094f2;
+              transition: all 1.5s; }
   .wrapper .main .container--primary {
     display: flex;
     flex-direction: row;
